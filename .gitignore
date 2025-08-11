@@ -1,0 +1,7 @@
+# env & local
+.env
+fireworks.db
+node_modules
+npm-debug.log*
+yarn-error.log*
+.DS_Store

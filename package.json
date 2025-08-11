@@ -1,0 +1,23 @@
+{
+  "name": "fireworks-voice-limit-bot",
+  "version": "1.0.0",
+  "description": "Discord bot: daily voice-time limit (DB + grace + logging), ID-based",
+  "main": "fireworks-bot.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node fireworks-bot.js",
+    "dev": "NODE_ENV=development node fireworks-bot.js",
+    "pm2:start": "pm2 start ecosystem.config.js --only fireworks-bot",
+    "pm2:stop": "pm2 stop fireworks-bot && pm2 delete fireworks-bot || true",
+    "pm2:logs": "pm2 logs fireworks-bot --lines 200",
+    "pm2:save": "pm2 save"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.6.0",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5"
+  }
+}
