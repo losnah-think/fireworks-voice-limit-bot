@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node fireworks-bot.js",
     "dev": "NODE_ENV=development node fireworks-bot.js",
+    "deploy:cmd": "node deploy-commands.js",
     "pm2:start": "pm2 start ecosystem.config.js --only fireworks-bot",
     "pm2:stop": "pm2 stop fireworks-bot && pm2 delete fireworks-bot || true",
     "pm2:logs": "pm2 logs fireworks-bot --lines 200",
